@@ -5,10 +5,9 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.hw04_gymlog_v300.Database.GymLogDatabase;
-import com.example.hw04_gymlog_v300.Database.entities.GymLog;
+import com.example.hw04_gymlog_v300.database.GymLogDatabase;
+import com.example.hw04_gymlog_v300.database.entities.GymLog;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -17,5 +16,5 @@ public interface GymLogDAO {
     void insert(GymLog gymLog);
 
     @Query("Select * from " + GymLogDatabase.GYM_LOG_TABLE)
-    ArrayList<GymLog> getAllRecords();
+    List<GymLog> getAllRecords();
 }
